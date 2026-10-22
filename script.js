@@ -21,8 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
       // Almost instant for accessibility
       setTimeout(finishIntro, 400);
     } else {
-      // Full sequence ~2.4s then exit
-      setTimeout(finishIntro, 2400);
+      // Mobile gets a longer intro so the animation can be read comfortably
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+      setTimeout(finishIntro, isMobile ? 3800 : 2800);
     }
   }
 
