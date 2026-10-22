@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
       // Almost instant for accessibility
       setTimeout(finishIntro, 400);
     } else {
-      // Mobile gets a longer intro so the animation can be read comfortably
+      // Mobile: slower so text and photo are comfortable to read
       const isMobile = window.matchMedia("(max-width: 768px)").matches;
-      setTimeout(finishIntro, isMobile ? 3800 : 2800);
+      setTimeout(finishIntro, isMobile ? 4500 : 3000);
     }
   }
 
